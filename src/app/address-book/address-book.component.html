@@ -1,0 +1,46 @@
+<div class="address-book_wrapper" *ngFor="let address of addresses | 
+slice: lowValue : highValue">
+    <mat-spinner *ngIf="addresses.length === 0"></mat-spinner>
+    <mat-card>
+        <mat-card-content>
+            <mat-card-header>
+                <mat-card-title class="address-book_card_title">{{ address.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-list>
+                <mat-list-item class="address-book_card_item">
+                    <div class="address-book_card_item_content">
+                        <span matListItemTitle class="address-book_card_item_title">Street</span>
+                        <span matListItemLine>{{ address.streetAddress }}</span>
+                    </div>
+                </mat-list-item>
+                <mat-list-item class="address-book_card_item">
+                    <div class="address-book_card_item_content">
+                        <span matListItemTitle class="address-book_card_item_title">City</span>
+                        <span matListItemLine>{{ address.city }}</span>
+                    </div>
+                </mat-list-item>
+                <mat-list-item class="address-book_card_item">
+                    <div class="address-book_card_item_content">
+                        <span matListItemTitle class="address-book_card_item_title">State</span>
+                        <span matListItemLine>{{ address.state }}</span>
+                    </div>
+                </mat-list-item>
+                <mat-list-item class="address-book_card_item">
+                    <div class="address-book_card_item_content">
+                        <span matListItemTitle class="address-book_card_item_title">Zip Code</span>
+                        <span matListItemLine>{{ address.zipCode }}</span>
+                    </div>
+                </mat-list-item>
+                <mat-list-item class="address-book_card_item">
+                    <div class="address-book_card_item_content">
+                        <span matListItemTitle class="address-book_card_item_title">Phone</span>
+                        <span matListItemLine>{{ address.phone }}</span>
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<mat-paginator [length]="addresses.length" pageSize=5 (page)="getPaginatorData($event)" [pageSizeOptions]="[5, 10, 15, 20]" showFirstLastButtons="false">
+</mat-paginator>
