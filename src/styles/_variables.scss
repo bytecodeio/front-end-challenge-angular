@@ -1,10 +1,9 @@
 @import '~@angular/material/theming';
-
 $angular-challenge-primary: mat-palette($mat-indigo);
 $angular-challenge-accent: mat-palette($mat-pink, A200, A100, A400);
 $angular-challenge-warn: mat-palette($mat-red);
-    
 // Export
 $primary: mat-color($angular-challenge-primary);
 $accent: mat-color($angular-challenge-accent);
 $warn: mat-color($angular-challenge-warn);
+$active: #32408f;

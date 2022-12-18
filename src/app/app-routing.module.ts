@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './core/containers/home-layout/home-layout.component';
 import { HomeComponent } from './core/containers/home/home.component';
-
+import { AddressBookComponent } from './address-book/address-book.component';
 
 const routes: Routes = [
   {
@@ -18,6 +18,11 @@ const routes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full'
       },
+      {
+        path: 'address-book',
+        component: AddressBookComponent,
+      },
+  
     ]
   },
 ];

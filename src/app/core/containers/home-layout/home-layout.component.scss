@@ -1,21 +1,37 @@
 @import "~src/styles/variables";
-
 .sidenav-container {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
+
 .sidenav-list-header {
-  margin: 1rem;
-  color: #ffffff;
-  font-weight: 400;
-  text-transform: uppercase;
-  // text-shadow: #fff 0px 1px 1px;
+    padding: 0.1rem;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    // text-shadow: #fff 0px 1px 1px;
 }
+
+.sidenav-list-header :hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
 .sidenav {
-  background-color: $primary;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: $primary;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.active-sidenav-list-header {
+    opacity: .7;
+    background-color: $active;
+}
+
+h4.sidenav-list-header-title,
+h2.sidenav-list-header-title {
+    margin: 8px;
 }
